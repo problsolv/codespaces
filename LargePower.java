@@ -9,7 +9,6 @@ public class LargePower {
         System.out.println(valid(base, exponent));
     }
     public static boolean valid(int ba, int ex) {
-        int power = (int)Math.pow(ba, ex);
-        return power > 5000;
+        return (int)Math.pow(ba, ex) > 5000;
     }
 }
