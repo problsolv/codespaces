@@ -6,9 +6,12 @@ public class LargePower {
         int base = in.nextInt();
         System.out.print("Enter an exponent value: ");
         int exponent = in.nextInt();
-        System.out.println(valid(base, exponent));
+        boolean valid = valid(base, exponent);
+        String v = String.valueOf(valid);
+        v = v.substring(0,1).toUpperCase() + v.substring(1);
+        System.out.println(v);
     }
     public static boolean valid(int ba, int ex) {
-        return (int)Math.pow(ba, ex) > 5000;
+        return Math.pow(ba, ex) > 5000;
     }
 }
